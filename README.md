@@ -1,5 +1,5 @@
 # go-tty
-Simple package provides check output device;
+Simple package provides check output device using cgo;
 
 ## Usage
 
