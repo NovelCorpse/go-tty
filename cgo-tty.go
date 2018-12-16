@@ -2,10 +2,11 @@ package tty
 
 /*
 #include <stdio.h>
-#ifdef __linux__
+#if defined __APPLE__ || defined __linux__
 #include <unistd.h>
 	int IsTTY() { return isatty(fileno(stdout)) ? 1 : 0; }
-#elif _WIN32
+#elif __WIN32 || _WIN64
+#include <stdio.h>
 #include <Windows.h>
 	CONSOLE_SCREEN_BUFFER_INFO sbi;
 	int IsTTY() { return GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &sbi) ? 1 : 0; }
