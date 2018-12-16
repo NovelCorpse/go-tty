@@ -4,7 +4,15 @@ Simple package provides check output device using cgo;
 ## Usage
 
 ```go
-fmt.Printf("Is TTY? - %t\n", tty.IsTTY())
+if tty.IsTTY() {
+	// doSomething()
+}
+```
+
+## Test
+
+```
+$ go test
 ```
 
 ## Installation
