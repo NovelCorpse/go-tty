@@ -9,7 +9,6 @@ package tty
 #include <Windows.h>
 	CONSOLE_SCREEN_BUFFER_INFO sbi;
 	int IsTTY() {
-		printf("windows\n");
 		if (GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &sbi)) {
 			printf("console\n");
 			return 1;
