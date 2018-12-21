@@ -19,10 +19,6 @@ package tty
 */
 import "C"
 
-func IsTTY() bool {
-	if C.IsTTY() == 1 {
-		return true
-	} else {
-		return false
-	}
-}
+func itob(v C.int) bool { return v != 0 }
+
+func IsTTY() bool { return itob(C.IsTTY()) }
